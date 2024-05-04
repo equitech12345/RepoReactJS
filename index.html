@@ -13,7 +13,46 @@
         <h1>Seguros No Pagamos Cooperativa</h1>
         <p>Bienvenidos a la web de Seguros No Pagamos Cooperativa</p>
     </div>
-    
+    <div class="container">
+        <h2>Formulario de Seguros</h2>
+      
+        <form id="formulario" action="clientes.html">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="tipo_seguro">Tipo de Seguro:</label>
+            <select id="tipo_seguro" name="tipo_seguro" required onchange="getTipoSeguro()">
+              <option value="Basico">Básico</option>
+              <option value="Intermedio">Intermedio</option>
+              <option value="Premium">Premium</option>
+            </select>
+            <div id="precios"></div>
+          </div>
+        
+          <div class="form-group">
+            <input type="submit" value="Enviar" >
+          </div>
+        </form>
+        <p id="datos"></p>
+      </div>
 </body>
 <script type = "text/javascript" src="index.js"></script>
 </html>
